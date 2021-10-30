@@ -1,7 +1,7 @@
 /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
 
 /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+*:where(:not(iframe, canvas, img, svg, video, input):not(svg *)) {
   all: unset;
   display: revert;
 }
@@ -17,6 +17,7 @@
   Remove list styles (bullets/numbers)
   in case you use it with normalize.css
 */
+
 ol,
 ul {
   list-style: none;
@@ -35,4 +36,13 @@ table {
 /* Revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
+}
+
+b {
+  font-weight: 700;
+}
+
+i {
+  font-style: italic;
+  font-weight: 500;
 }
