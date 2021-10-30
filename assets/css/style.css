@@ -101,8 +101,8 @@ main {
 
 aside {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 43px;
   max-width: 250px;
   padding: 57px 50px 50px 43px;
@@ -122,6 +122,11 @@ aside .cook-time-group {
 
 aside .cook-time-group span.cook-time-icon {
   font-size: 35px;
+  color: var(--color-gray-2);
+}
+
+aside .cook-time-group.--yields span.cook-time-icon {
+  /* font-size: 35px; */
   color: var(--color-orange);
 }
 
@@ -159,9 +164,6 @@ aside .cook-time-group .cook-time-text p.cook-time-text__information {
   margin-bottom: 32px;
 }
 
-.recipe .recipe__ingredients {
-}
-
 .recipe .recipe__ingredients .recipe__ingredients__name {
   font-family: var(--font-playfair-display);
   font-style: italic;
@@ -193,9 +195,6 @@ aside .cook-time-group .cook-time-text p.cook-time-text__information {
   border-radius: 4px;
 }
 
-.recipe .recipe__ingredients__ingredient .ingredient-group input:checked {
-  background: red;
-}
 .recipe .ingredient-group label {
   font-family: var(--font-montserrat);
   color: var(--color-gray-1);
@@ -232,4 +231,102 @@ footer .attribution a {
 
 footer .attribution a:hover {
   color: var(--color-gray-2);
+}
+
+@media screen and (max-width: 920px) {
+  body {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  header h1.headline {
+    font-size: 36px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    max-width: 600px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "yield yield yield ";
+  }
+
+  aside .cook-time-group.--yields {
+    grid-area: yield;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1.headline {
+    font-size: 24px;
+  }
+
+  header p.supporting-copy {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  header img.recipe-image {
+    margin-bottom: 25px;
+  }
+
+  main {
+    gap: 30px;
+  }
+
+  aside {
+    gap: 15px;
+  }
+
+  aside .cook-time-group {
+    gap: 6px;
+  }
+
+  aside .cook-time-group span.cook-time-icon {
+    font-size: 20px;
+  }
+
+  aside .cook-time-group .cook-time-text p.cook-time-text__title {
+    font-size: 10px;
+  }
+
+  aside .cook-time-group .cook-time-text p.cook-time-text__information {
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  .recipe h1.recipe__title {
+    font-size: 18px;
+
+    margin-bottom: 15px;
+  }
+
+  .recipe .recipe__ingredients .recipe__ingredients__name {
+    font-size: 16px;
+  }
+
+  .recipe .recipe__ingredients__ingredient .ingredient-group {
+    gap: 8px;
+  }
+
+  .recipe .ingredient-group label {
+    font-size: 14px;
+  }
+
+  ol {
+    padding-top: 13px;
+  }
+
+  .recipe .source {
+    font-size: 12px;
+  }
 }
