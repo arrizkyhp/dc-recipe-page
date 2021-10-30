@@ -320,6 +320,7 @@ footer .attribution a:hover {
 
   .recipe .ingredient-group label {
     font-size: 14px;
+    outline: none;
     -webkit-tap-highlight-color: transparent;
   }
 
