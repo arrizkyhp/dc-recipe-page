@@ -1,0 +1,11 @@
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-crimson-pro: "Crimson Pro", serif;
+  --font-lora: "Lora", serif;
+
+  --color-dark: hsla(270, 4%, 9%, 1);
+  --color-gray: hsla(0, 0%, 51%, 1);
+
+  --color-gray-3: hsla(0, 0%, 74%, 1);
+  --color-gray-4: rgb(168, 168, 168);
+}
